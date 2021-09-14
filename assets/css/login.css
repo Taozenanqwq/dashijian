@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hide {
+  display: none;
+}
+body {
+  display: flex;
+  height: 100vh;
+  background: url(../images/login_bg.jpg) no-repeat center;
+  background-size: 100% 100%;
+  justify-content: center;
+  align-items: center;
+}
+body .logo {
+  position: absolute;
+  left: 150px;
+  top: 50px;
+  width: 146px;
+  height: 60px;
+  background: url(../images/logo.png);
+}
+body .login,
+body .reg {
+  width: 300px;
+  border-radius: 3px;
+  background: white;
+}
+body .login .title,
+body .reg .title {
+  height: 40px;
+  margin-top: 10px;
+  background: url(../images/login_title.png) no-repeat center center;
+}
+body .login .input-item,
+body .reg .input-item {
+  position: relative;
+}
+body .login .input-item i,
+body .reg .input-item i {
+  position: absolute;
+  line-height: 25px;
+  left: 28px;
+  color: #757575;
+}
+body .login input:not([type="submit"]),
+body .reg input:not([type="submit"]) {
+  display: block;
+  width: 250px;
+  height: 25px;
+  margin: 10px auto;
+  padding-left: 20px;
+  border: 1px solid grey;
+  border-radius: 2px;
+}
+body .login input[type="submit"],
+body .reg input[type="submit"] {
+  display: block;
+  width: 250px;
+  height: 30px;
+  margin: auto;
+  border: none;
+  border-radius: 3px;
+  background: #4096f8;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+}
+body .login span,
+body .reg span {
+  display: block;
+  width: 250px;
+  margin: 10px auto;
+  text-align: right;
+  cursor: pointer;
+}

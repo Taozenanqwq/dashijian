@@ -5,11 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>登录界面</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <script src="../assets/lib/jquery.js"></script>
+    <script src="../assets/js/login.js"></script>
 </head>
 
 <body>
-
+    <div class="logo"></div>
+    <form action="" class="reg hide layui-form" method="POST">
+        <div class="title"></div>
+        <div class="input-item"><i class="layui-icon layui-icon-username"></i>
+            <input type="text" placeholder="请输入用户名" autocomplete="off" lay-verify="required|username" name="username"></div>
+        <div class="input-item"><i class="layui-icon layui-icon-password"></i>
+            <input type="password" placeholder="请输入密码" autocomplete="off" lay-verify="required|pwd" name="password"></div>
+        <div class="input-item"><i class="layui-icon layui-icon-password"></i>
+            <input type="password" placeholder="再次确认输入密码" autocomplete="off" lay-verify="required|confirm_pwd" name="con-pwd"></div>
+        <input type="submit" lay-submit="" value="注册" id="reg-btn">
+        <span>去登陆</span>
+    </form>
+    <form action="" class="login layui-form" method="POST">
+        <div class="title"></div>
+        <div class="input-item"><i class="layui-icon layui-icon-username"></i>
+            <input type="text" placeholder="请输入用户名" autocomplete="off" lay-verify="required|username" name="username"></div>
+        <div class="input-item"><i class="layui-icon layui-icon-password"></i>
+            <input type="password" placeholder="请输入密码" autocomplete="off" lay-verify="required|pwd" name="password"></div>
+        <input type="submit" lay-submit="" value="登录" id="login-btn">
+        <span>去注册</span>
+    </form>
 </body>
 
 </html>
