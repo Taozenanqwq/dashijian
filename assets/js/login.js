@@ -37,11 +37,10 @@ $(function() {
 
     // 注册请求
     const layer = layui.layer
-    const base = 'http://api-breakingnews-web.itheima.net'
     $('.reg').on('submit', () => {
             event.preventDefault();
             const data = $('.reg').serialize();
-            $.post(base + '/api/reguser', data, (res) => {
+            $.post('/api/reguser', data, (res) => {
                 if (res.status) {
                     layer.msg(res.message);
                 } else {
@@ -60,7 +59,7 @@ $(function() {
         event.preventDefault();
         const data = $('.login').serialize();
         console.log(1);
-        $.post(base + '/api/login', data, (res) => {
+        $.post('/api/login', data, (res) => {
             if (res.status) {
                 layer.msg(res.message);
             } else {
@@ -70,5 +69,19 @@ $(function() {
         })
 
     })
+    $.ajaxPrefilter(function(options) {
+        options.url = 'http://api-breakingnews-web.itheima.net' + options.url;
+        if (options.url.includes('/my/')) {
+            options.headers = {
+                Authorization: localStorage.getItem('token') || ''
+            }
+            options.complete = function(res) {
+                if (res.responseJSON.status) {
+                    localStorage.removeItem('token');
+                    location.href = './login.html';
+                }
+            }
+        }
 
+    })
 })
