@@ -36,7 +36,7 @@ function renderAvatar(user) {
     $('#welcome').html('欢迎，' + name).show();
     $('.name').html(name).show();
     if (!user.user_pic) {
-        $('.textavatar').html(name[0].toUpperCase()).show()
+        $('.textavatar').html(name[0].toUpperCase()).css('display', 'inline-block')
     } else {
         $('.avatar').attr('src', user.user_pic).show();
     }

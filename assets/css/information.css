@@ -1,0 +1,16 @@
+body {
+  background: #F2F3F5;
+}
+.layui-fluid {
+  margin: 10px;
+  background: white;
+  box-shadow: 0 0 3px rgba(85, 85, 85, 0.3);
+  padding-bottom: 20px;
+}
+.layui-input {
+  width: 300px;
+}
+.title {
+  height: 50px;
+  line-height: 50px;
+}
