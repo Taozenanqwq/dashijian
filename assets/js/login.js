@@ -77,6 +77,7 @@ $(function() {
             }
             options.complete = function(res) {
                 if (res.responseJSON.status) {
+                    console.log(res, res.responseJSON);
                     localStorage.removeItem('token');
                     location.href = './login.html';
                 }

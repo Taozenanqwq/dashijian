@@ -1,0 +1,22 @@
+body {
+  background: #F2F3F5;
+}
+.layui-card {
+  margin: 10px;
+}
+.layui-card-header {
+  position: relative;
+}
+.layui-card-header .layui-btn {
+  position: absolute;
+  height: 32px;
+  right: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+  line-height: 32px;
+}
+#form-add,
+#form-edit {
+  margin-top: 20px;
+  margin-left: 20px;
+}

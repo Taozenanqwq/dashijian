@@ -18,7 +18,7 @@ body {
 .cropper-box {
   width: 350px;
   height: 350px;
-  background-color: cyan;
+  background-color: gray;
   overflow: hidden;
 }
 /* 设置第一个预览区域的样式 */
